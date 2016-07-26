@@ -1,3 +1,18 @@
+<?php 
+	$temp_c  = floatval($_GET["celsius"]);
+	$temp_f  = floatval($_GET["fahrenheit"]);
+	
+	$dist_m  = $_GET["miles"];
+	$dist_km  = $_GET["kilometers"];
+	
+	$mass_kg  = $_GET["kilograms"];
+	$mass_st  = $_GET["stones"];
+	$mass_lb  = $_GET["pounds"];
+?>
+
+
+<?php include("functions.php"); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +22,13 @@
 
 <h1>Results</h1>
 
+
 <div>
 <h3>Temperature</h3>
 <form method="get" action="index.php">
-	<p><input type="text" name="celsius" value="">˚C</p>
+	<p><input type="text" name="celsius" value="<?php echo Temperature::to_celsius($temp_f); ?>">˚C</p>
 	<p>=</p>
-	<p><input type="text" name="fahrenheit" value="">˚F</p>
+	<p><input type="text" name="fahrenheit" value="<?php echo Temperature::to_fahrenheit($temp_c); ?>">˚F</p>
 	<button href="index.php" type="submit" value="submit">Return</button>
 </form>
 </div>
@@ -21,9 +37,9 @@
 <div>
 <h3>Distance</h3>
 <form method="get" action="index.php">
-	<p><input type="text" name="kilometers" value="">kilometers</p>
+	<p><input type="text" name="kilometers" value="<?php echo Distance::to_kilometers($dist_m); ?>">kilometers</p>
 	<p>=</p>
-	<p><input type="text" name="miles" value="">miles</p>
+	<p><input type="text" name="miles" value="<?php echo Distance::to_miles($dist_km); ?>">miles</p>
 	<button href="index.php" type="submit" value="submit">Return</button>
 </form>
 </div>
