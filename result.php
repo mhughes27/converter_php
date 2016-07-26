@@ -2,9 +2,11 @@
 	$temp_c  = floatval($_GET["celsius"]);
 	$temp_f  = floatval($_GET["fahrenheit"]);
 	
-	$dist_m  = $_GET["miles"];
-	$dist_km  = $_GET["kilometers"];
+	$dist_m  = floatval($_GET["miles"]);
+	$dist_km  = floatval($_GET["kilometers"]);
 	
+
+
 	$mass_kg  = $_GET["kilograms"];
 	$mass_st  = $_GET["stones"];
 	$mass_lb  = $_GET["pounds"];
@@ -21,6 +23,10 @@
 <body>
 
 <h1>Results</h1>
+<p>miles params passing <?php echo $dist_m ?> </p>
+<p>km params passing <?php echo $dist_km ?> </p>
+
+
 
 
 <div>

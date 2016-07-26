@@ -2,8 +2,8 @@
 	$temp_c  = floatval($_GET["celsius"]);
 	$temp_f  = floatval($_GET["fahrenheit"]);
 	
-	$dist_m  = $_GET["miles"];
-	$dist_km  = $_GET["kilometers"];
+	$dist_m  = floatval($_GET["miles"]);
+	$dist_km  = floatval($_GET["kilometers"]);
 	
 	$mass_kg  = $_GET["kilograms"];
 	$mass_st  = $_GET["stones"];
