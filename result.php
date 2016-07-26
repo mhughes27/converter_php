@@ -23,10 +23,6 @@
 <body>
 
 <h1>Results</h1>
-<p>miles params passing <?php echo $dist_m ?> </p>
-<p>km params passing <?php echo $dist_km ?> </p>
-
-
 
 
 <div>
