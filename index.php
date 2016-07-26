@@ -1,17 +1,3 @@
-<?php 
-	$temp_c  = floatval($_GET["celsius"]);
-	$temp_f  = floatval($_GET["fahrenheit"]);
-	
-	$dist_m  = floatval($_GET["miles"]);
-	$dist_km  = floatval($_GET["kilometers"]);
-	
-	$mass_kg  = $_GET["kilograms"];
-	$mass_st  = $_GET["stones"];
-	$mass_lb  = $_GET["pounds"];
-?>
-
-<?php include("functions.php"); ?>
-
 
 <!DOCTYPE html>
 <html>
